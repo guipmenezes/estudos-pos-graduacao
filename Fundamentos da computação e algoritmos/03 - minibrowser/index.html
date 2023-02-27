@@ -1,0 +1,54 @@
+<!--<main>
+    <header>
+        <div class="close-area"></div>
+        <input type="text" placeholder= "https://guilhermenezes.com" value="https://guilhermenezes.com">
+    </header>
+    <iframe src="https://guipmenezes.github.io/portifolio-desafio-ONE-Alura/" frameborder="0"></iframe>
+</main>-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Browser Experimental</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  //[ENTRADA]
+  var aba1 = {
+    titulo: "Titulo da aba 1",
+    url: "https://www.youtube.com/",
+  };
+  var aba2 = {
+    titulo: "Titulo da aba 2",
+    url: "https://www.linkedin.com/in/menezesguilherme/",
+  };
+
+  //Arrays: Listas
+  const abas = [aba1, aba2];
+
+  //[PROCESSAMENTO]
+  for (aba of abas) {
+    console.log(aba.titulo);
+
+    //[SAÍDA]
+    var valorAtualDoHtml = document.body.innerHTML;
+    document.body.innerHTML =
+      valorAtualDoHtml +
+      `
+        <li>
+            <a href="${aba.url}"> ${aba.titulo}</a>
+        </li>`;
+  }
+
+  //O que tem em uma aba do navegador?
+  //titulo
+  //url
+  //pagina de fato (html, css, javascript)
+</script>
+
+<link rel="stylesheet" href="style.css" />

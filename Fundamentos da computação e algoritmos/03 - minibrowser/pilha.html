@@ -1,0 +1,44 @@
+<title>Pilha/Stack</title>
+
+<script>
+
+//LIFO - Last In First Out
+    class BrowserHistoryStack {
+        constructor() {
+            this.cursor = 0;
+            this.data = [];
+        }
+
+        push(item) {
+            this.cursor += 1;
+            this.data.push(item);
+        }
+
+        back() { //pop()
+            this.cursor -= 1;
+            this.data.pop();
+        }
+
+        print() {
+            console.log('Cursor' + this.cursor);
+            console.log('Itens atuais' + this.data);
+
+        }
+    }
+
+    console.log('Pilha/Stack');
+
+    const history = new BrowserHistoryStack();
+    
+    history.print();
+    history.push('https://google.com.br');
+    history.push('https://youtube.com.br');
+    history.push('https://facebook.com');
+    history.push('https://youtube.com.br');
+    history.push('https://google.com.br');
+    history.print();
+    
+    history.back();
+    history.print();
+    
+</script>

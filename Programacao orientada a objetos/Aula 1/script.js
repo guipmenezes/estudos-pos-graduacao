@@ -43,3 +43,19 @@ const empregado = {
 };
 
 console.log(empregado.calculaSalario());
+
+
+//Mudando o objeto empregado para uma função
+function funcionario(salarioBase, valorHoraExtra, qtHoraExtra) {
+    return {
+        salarioBase,
+        valorHoraExtra,
+        qtHoraExtra,
+        calculaSalario: function() {
+            return this.salarioBase + (valorHoraExtra * qtHoraExtra);
+        }
+    }
+}
+
+const empregado1 = funcionario(10000, 100, 20);
+console.log(empregado1.calculaSalario());

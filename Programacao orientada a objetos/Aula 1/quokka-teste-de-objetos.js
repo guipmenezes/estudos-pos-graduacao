@@ -17,3 +17,12 @@ console.log(pessoa2.calculaIdade());
 console.log(pessoa3.calculaIdade());
 
 console.log(pessoa1.__proto__);
+
+//Função para descobrir qual o tipo do Objeto
+function descobreTipo(objeto) {
+    if('Object' == objeto.constructor.name) {
+        console.log('É um objeto raíz');
+    } else {
+        console.log('É um objeto do tipo: ' + objeto.constructor.name);
+    }
+}
